@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import ChatbotIcon from "./components/ChatbotIcon";
 import ChatForm from "./components/ChatForm";
 import ChatMessage from "./components/ChatMessage";
-import { companyInfo } from "./companyInfo";
+import { collegeInfo } from "../collegeInfo";
 
 const App = () => {
   const chatBodyRef = useRef();
@@ -11,7 +11,7 @@ const App = () => {
     {
       hideInChat: true,
       role: "model",
-      text: companyInfo,
+      text: collegeInfo,
     },
   ]);
 
@@ -62,7 +62,7 @@ const App = () => {
         <div className="chat-header">
           <div className="header-info">
             <ChatbotIcon />
-            <h2 className="logo-text">Chatbot</h2>
+            <h2 className="logo-text">ASCET Chatbot</h2>
           </div>
           <button onClick={() => setShowChatbot((prev) => !prev)} className="material-symbols-outlined">
             keyboard_arrow_down
@@ -74,7 +74,19 @@ const App = () => {
           <div className="message bot-message">
             <ChatbotIcon />
             <p className="message-text">
-              Hey there  <br /> How can I help you today?
+              Welcome to Audisankara College Assistant! 👋<br/><br/>
+              I'm here to help you with information about:
+              <br></br>
+              • Admissions and Programs
+              <br></br>
+              • Campus Life and Facilities
+              <br></br>
+              • Academic Requirements
+              <br></br>
+              • Financial Aid
+              <br></br>
+              • And much more!<br/><br/>
+              How can I assist you today?
             </p>
           </div>
 
