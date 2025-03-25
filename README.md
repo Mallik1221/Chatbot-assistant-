@@ -1,7 +1,8 @@
-# ChatBot.React
+# AI Chatbot Assistant for College Website
 
-An AI-powered chatbot built with React JS and CSS, utilizing the free Google Gemini API for dynamic and intelligent responses. This project demonstrates how to integrate a third-party API with React to create an interactive user experience.
+Project Overview
 
+This project is an AI-based chatbot assistant designed to enhance the user experience on the Audisankara College of Engineering & Technology website. It provides instant, automated responses to queries related to admissions, courses, faculty information, campus events, and more.
 ---
 
 ## Features

@@ -12,10 +12,10 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }) => {
     // Update chat history with the user's message
     setChatHistory((history) => [...history, { role: "user", text: userMessage }]);
 
-    // Delay 400 ms before showing "Thinking..." and generating response
+    // Delay 400 ms before showing "Typing..." and generating response
     setTimeout(() => {
-      // Add a "Thinking..." placeholder for the bot's response
-      setChatHistory((history) => [...history, { role: "model", text: "Thinking..." }]);
+      // Add a "Typing..." placeholder for the bot's response
+      setChatHistory((history) => [...history, { role: "model", text: "Typing..." }]);
 
       // Call the function to generate the bot's response
       generateBotResponse([...chatHistory, { role: "user", text: `Using the details provided above, please address this query: ${userMessage}` }]);
@@ -24,7 +24,7 @@ const ChatForm = ({ chatHistory, setChatHistory, generateBotResponse }) => {
 
   return (
     <form onSubmit={handleFormSubmit} className="chat-form">
-      <input ref={inputRef} placeholder="Message..." className="message-input" required />
+      <input ref={inputRef} placeholder="Ask about admissions, courses, facilities..." className="message-input" required />
       <button type="submit" id="send-message" className="material-symbols-outlined">arrow_upward</button>
     </form>
   );
